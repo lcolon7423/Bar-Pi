@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+{% block content %}
+<style>
+body{background-color:#808000
+
+}
+
+
+</style>
+
+
+<article class="media content-section">
+          <div class="media-body">
+	<h2>Current Ingredients </h2>
+	<div class="article-metadata">
+           <div class="article-metadata">
+            </div>
+		</div>
+			</div>
+</article>
+
+
+<article class="media content-section">
+          <div class="media-body">
+        <div class="article-metadata">
+        {%for count in range(0,tz,2)%}
+        <h3><p>{{dingredients[count]}} {{dingredients[count+1]}} Ounces</p></h3><br>
+        {%endfor%}
+            <div class="article-metadata">
+            </div>
+</article>
+
+
+ <div class="content2-section">
+        <form method="POST" action="">
+	{{ form.hidden_tag() }}
+		<br><br>
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Enter {{drink}}'s ingredients</legend>
+
+		<select name = 'ingredients' class ='form-control' id ='ingredients' >
+
+	  {% for count in range(0,tsize,2)%}
+
+		<option value={{ingredients[count]}}>{{ingredients[count+1]}}</option>
+
+		{% endfor %}
+			</select>
+			<br>
+		 <p>New Ingredient</p>
+		<input type="text" name="ingredient"/>	
+		<br>
+			
+		 <div class="form-group">
+                    {{ form.ingredient_amt.label(class="form-control-label") }}
+                    {% if form.ingredient_amt.errors %}
+                        {{ form.ingredient_amt(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.ingredient_amt.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.ingredient_amt(class="form-control form-control-lg") }}
+                    {% endif %}
+		<br>
+		<div class="form-check">
+                    {{ form.addmore(class="form-check-input") }}
+                    {{ form.addmore.label(class="form-check-label") }}
+                </div>
+
+		   <div class="form-check">
+                    {{ form.update(class="form-check-input") }}
+                    {{ form.update.label(class="form-check-label") }}
+                </div>
+
+            </fieldset>
+ 		<div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+    <div class="border-top pt-3">
+    </div>
+
+</div>
+
+
+
+
+{% endblock content %}
