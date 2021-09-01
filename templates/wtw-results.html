@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+{% block content %}
+<style>
+img {
+  width: 100%;
+  height: auto;
+}
+
+.card-section {
+  background: {{lightblue}};
+  padding: 10px 20px;
+  border: 1px solid {{blue}};
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+
+</style>       
+
+
+
+ <article class="media card-section">
+	<img src="/static/barpi/{{pic}}">
+	
+
+          <div class="media-body">
+
+            <div class="article-metadata">
+            </div>
+          </div>
+        </article>
+
+
+<article class="media card-section">
+	<p><h2>{{result}}</h2></p>
+          <div class="media-body">
+
+            <div class="article-metadata">
+            </div>
+          </div>
+        </article>
+
+<article class="media card-section">
+
+        <h1><a href="/wtw">Play again?</h1></a>
+
+          <div class="media-body">
+
+            <div class="article-metadata">
+            </div>
+          </div>
+        </article>
+
+
+
+<meta charset="UTF-8" />
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="shortcut icon" href="../static/barpi/martini-glass.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="../static/barpi/martini-glass.ico">
+</head>
+	
+	
+
+
+
+
+
+
+{% endblock content %}
+
+
+

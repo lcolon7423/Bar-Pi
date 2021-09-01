@@ -1,0 +1,146 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h1><FONT COLOR="#FF0000">Click on Ingredient</h1></FONT>
+
+<style>
+img {
+  width: 100%;
+  height: auto;
+}
+
+body {
+	background-repeat:no-repeat;
+	background-image: url("static/barpi/cabinet4.jpg");
+	background-position: left 10px top 90px;
+	background-color: #000000
+}
+
+</style>       
+
+
+<br>
+
+
+ <article class="media content-section2">
+
+
+{% for p in topics:  %}
+{%if p.count >4%}
+
+{%else%}
+<a href="/custom/{{p.name}}"><div class="column"><img title="{{p.name}}" alt="name" src="{{ url_for('static', filename='drinks/' + p.image) }}" alt="{{p.name}}"align="left" ></div></a>
+
+		{%endif%}
+	
+		{% endfor %}		
+		
+
+          <div class="media-body">
+
+            <div class="article-metadata">
+            </div>
+          </div>
+        </article>
+
+
+<br><br>
+<article class="media content-section2"> 
+	
+
+
+{% for p in topics %}
+{%if p.count >4 and p.count <8 %}
+
+<a href="/custom/{{p.name}}"><div class="column"><img title="{{p.name}}" alt="name" src="{{ url_for('static', filename='drinks/' + p.image) }}" alt="{{p.name}}"align="left" ></div></a>
+
+{%else%}
+
+
+{%endif%}
+		
+
+
+		{% endfor %}	
+	
+
+          <div class="media-body">
+
+            <div class="article-metadata">
+            </div>
+          </div>
+        </article>
+
+
+<br><br><br>
+<article class="media content-section2"> 
+
+
+
+{% for p in topics %}
+
+{%if p.count >8 and p.count <12 %}
+
+<a href="/custom/{{p.name}}"><div class="column"><img title="{{p.name}}" alt="name" src="{{ url_for('static', filename='drinks/' + p.image) }}" alt="{{p.name}}"align="left" ></div></a>
+
+{%else%}
+
+
+{%endif%}
+		
+
+
+		{% endfor %}		
+
+<div class="article-metadata">
+            </div>
+          </div>
+        </article>
+
+
+<br><br><br>
+<article class="media content-section2"> 
+
+
+
+{% for p in topics %}
+
+{%if p.count >12 and p.count <17 %}
+
+<a href="/custom/{{p.name}}"><div class="column"><img title="{{p.name}}" alt="name" src="{{ url_for('static', filename='drinks/' + p.image) }}" alt="{{p.name}}"align="left" ></div></a>
+
+{%else%}
+
+
+{%endif%}
+		
+
+
+		{% endfor %}		
+
+
+<br><br><br>
+          <div class="media-body">
+
+            <div class="article-metadata">
+            </div>
+          </div>
+        </article>
+
+<meta charset="UTF-8" />
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="shortcut icon" href="../static/barpi/martini-glass.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="../static/barpi/martini-glass.ico">
+</head>
+	
+	
+
+
+
+
+
+
+{% endblock content %}
+
+
+

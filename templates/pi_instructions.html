@@ -1,0 +1,327 @@
+{% extends "layout.html" %}
+{% block content %}
+<style>
+
+.tab{margin-left:60px;}
+
+</style>
+<h1 id="home"><br>
+<h1 style="text-align:center"><font color="Teal"><p style="font-size:65px">Instruction Manual</h1></FONT>
+
+<h1 style="text-align:center"><font color="MediumPurple"><p style="font-size:65px">Contents</h1></FONT>
+<font color="Olive"><p style="font-size:40px">Drinks</font>
+<h2><a href="#AD"><p class="tab">Add a drink </a></p></h2>
+<h2><a href="#AVD"><p class="tab">Available drinks</a></p></h2>
+<h2><a href="#Cd"><p class="tab">Custom drinks</a></p></h2>
+<h2><a href="#Ud"><p class="tab">Update Drink</a></p></h2>
+<h2><a href="#Fav"><p class="tab">Favorites</a></p></h2>
+<h2><a href="#MLC"><p class="tab">My Liquor Cabinet</a></p></h2>
+<h2><a href="#Dl"><p class="tab">Drink List</a></p></h2>
+
+
+<font color="Olive"><p style="font-size:40px">Shots</font>
+<h2><a href="#As"><p class="tab">Add a shot </a></p></h2>
+<h2><a href="#Avs"><p class="tab">Available shots</a></p></h2>
+<h2><a href="#Us"><p class="tab">Update shot</a></p></h2>
+<h2><a href="#Ui"><p class="tab">Update Ingredient</a></p></h2>
+<h2><a href="#Favs"><p class="tab">Favorites</a></p></h2>
+<h2><a href="#Sl"><p class="tab">shot List</a></p></h2>
+
+<font color="Olive"><p style="font-size:40px">Games</font>
+<h2><a href="#SGS"><p class="tab">Set game shot</a></p></h2>
+<h2><a href="#VG"><p class="tab">view Games</a></p></h2>
+<h2><a href="#GS"><p class="tab">Game Settings</a></p></h2>
+
+<font color="Olive"><p style="font-size:40px">Pumps</font>
+<h2><a href="#LP"><p class="tab">Load Pump</a></p></h2>
+<h2><a href="#FP"><p class="tab">Flush Pump</a></p></h2>
+<h2><a href="#AP"><p class="tab">Add Pump</a></p></h2>
+<h2><a href="#MP"><p class="tab">Update Pump</a></p></h2>
+
+
+
+
+<font color="GoldenRod"><p style="font-size:40px">Specail Features</h2></font></p>
+<h2><a href="/makegif"><p class="tab">How to make a gif </a></p></h2>
+<h2><a href="/voice"><p class="tab">How to use voice Commands </a></p></h2>
+<br><br><br>
+
+
+<h1 id="AD"><br></h1>
+<h1 style="font-size:50px"><font color="Lime">Add a drink</p></a></h1>
+<p><h5><font color="crimson">Description: To add a new drink to the database</p></font></h5>
+<h2><p><font color="white">Under Settings in the nav bar click add drink</p>
+
+<p>Enter the name of the drink (Captialize first letter to be sure it's sorted propery)</p>
+<p>If the drink isn't in the database you will be brought to add drink form</p>
+<p>From the Dropdown menu add the ingredients if the ingredient isn't there, select other then type in the name in Enter new Ingredient</p>
+<p>Enter the amount</p>
+<p>If you have more ingredients to add, select addmore then click add</p>
+<p>When you about to add the last ingredient, do not select addmore and click add</p>
+<p>You drink as been added to the library</p>
+<p>If you add the wrong ingredient continue making the drink then update drink to fix it</p>
+<p><font color="red">Note: You can only make drinks that have the<font color="yellow"> SAME NUMBER OF PUMPS</font> as you do ingredients if you have
+only 3 pumps you will only be able to make drinks with 3 ingredients. You can make a drink having 
+more but you will not be able to make it and it will not show up on your drink list </p></font>
+<h2><a href="#home"><p class="tab">Back to Top </a></p></h2> 
+<br><br>
+
+<h1 id="AVD"></h1><br>
+<h1 style="font-size:50px"><font color="Lime">Available Drinks</p></a></h1></font>
+<p>From either the short cuts list or Drinks click on Available drinks</p>
+<p>Available drinks are drinks that could be made with what is in the <a href="/lcabinet">Liquor Cabinet </a>select to view $
+available</p>
+<p>If the drink you want is no available, either find the drink in <a href="/alldrinks">drink list</p></a>
+<h2><a href="#home"><p class="tab">Back to Top </a></p></h2>
+<br><br>
+<h1 id="Cd"></h1><br>
+<h1 style="font-size:50px"><font color="Lime">Custom Drinks</p></a></h1></font>
+<p>Custom drinks takes what you have in the <a href="/lcabinet">liquor cabinet.</p></a>
+<p>Choose what you want by clicking on the bottle in the cabinet</p>
+<p>Select quantity then hit enter</p>
+<p>You get 4 choices:</p>
+<p class="tab"><font color="Orange">continue</p>
+<p class="tab">Make & save shot</p>
+<p class="tab">Make & save drink</p>
+<p class="tab">Just make it</p></font>
+<p>Choose what you want to do</p>
+<p>if you change your mind, click home or Bar-Pi on the nav bar</p>
+<h2><a href="#home"><p class="tab">Back to Top </a></p></h2>
+<br><br>
+
+<h1 id="Ud"></h1><br>
+<h1 style="font-size:50px"><font color="Lime">Update Drinks</p></a></h1></font>
+<p>In update select update drinks</p>
+<p>Choose the drink you wish to change<p>
+<p>The drink will list all of the ingredients and quantity<p>
+<p>Here you and click add to add an ingredient<p>
+<p>when you add to the drink you will have to select update to add the ingredient<p>
+<p>Click delete to delete the drink<p>
+<p>To change each ingredient click on the ingredient<p>
+<p>Clicking on the ingredient will give you 2 more choices Update or delete<p>
+<p>Update will give you the option to change the amount<p>
+<p>Delete will remove that ingredient<p>
+<p>To exit click home or Bar-Pi on the nav bar<p>
+<h2><a href="#home"><p class="tab">Back to Top </a></p></h2>
+<br><br>
+
+<h1 id="Fav"></h1><br>
+<h1 style="font-size:50px"><font color="Lime">Favorites</p></a></h1></font>
+<p class="tab"><font color="SaddleBrown">Create Favorites</p></font>
+<p>In favorites click create favorites then Favorite Drink</p>
+<p>From the list choose your drink</p>
+<p>Click favorite drink</p>
+<p>Enter Name and click enter</p>
+<p class="tab"><font color="SaddleBrown">Delete Favorites</p></font>
+<p>In favorites click delete favorites then Favorite Drink</p>
+<p>From the list select the name you want to remove</p>
+<p class="tab"><font color="SaddleBrown">Make Favorites</p></font>
+<p>In favorites click make favorites then Favorite Drink</p>
+<p>If the ingredients in your favorite drink isn't in the pumps you will be prompted to autoload them</p>
+<p><font color="crimson"><h5>Note: Bar-Pi will not make the drink if the ingredients are not in the pumps</p></font></h5>
+<h2><a href="#home"><p class="tab">Back to Top </a></p></h2>
+<br><br>
+
+<h1 id="MLC"></h1><br>
+<h1 style="font-size:50px"><font color="Lime">My Liquor Cabinet</p></a></h1></font>
+<p class="tab"><font color="DarkGoldenRod">Create my liquor cabinet</font>
+<p>From either settings or Pumps click Load Pump</p>
+<p>Choose any one of the existing liqour or mixers to load</p>
+<p>Choose to load Add My Cabinet</p>
+<p>Select choose who's cabinet you want to put into</p>
+<p>If the name doesn't exist set to other then add name to New Owner</p>
+<p>check addmore if you wish to add to my cabinet</p>
+<p class="tab"><font color="DarkGoldenRod">Access my liquor cabinet</font>
+<p>from Drinks click on my liquor cabinet</p>
+<p>Select the name from the list</p>
+<p>On the bottom you can choose from drinks or shots</p>
+<p class="tab"><font color="DarkGoldenRod">Remove from my liquor cabinet</font>
+<p>Inside of my liquor cabinet select the liquor or mixer you want to remove</p>
+<p>Click on the image to remove from cabinet</p>
+
+<h2><a href="#home"><p class="tab">Back to Top </a></p></h2>
+
+<h1 id="Dl"></h1><br>
+<h1 style="font-size:50px"><font color="Lime">Drink List</p></a></h1></font>
+<p>In the Short cuts click drink List or At the bottom of Stats</p>
+<p>You could just view the possible drinks that could be made or click on a drink</p>
+<p>From there you could auto load it's ingredients or choose it to be your favorite drink</p>
+<h2><a href="#home"><p class="tab">Back to Top </a></p></h2>
+<br><br>
+
+<h1 id="As"><br></h1>
+<h1 style="font-size:50px"><font color="Lime">Add a shot</p></a></h1>
+<p><h5><font color="crimson">Description: To add a new shot to the database</p></font></h5>
+<h2><p><font color="white">Under Settings in the nav bar click add shot</p>
+
+<p>Enter the name of the shot (Captialize first letter to be sure it's sorted propery)</p>
+<p>If the shot isn't in the database you will be brought to add shot form</p>
+<p>From the Dropdown menu add the ingredients if the ingredient isn't there, select other then type in the name in Enter new Ingredient</p>
+<p>Enter the amount</p>
+<p>If you have more ingredients to add, select addmore then click add</p>
+<p>When you about to add the last ingredient, do not select addmore and click add</p>
+<p>You shot as been added to the library</p>
+<p>If you add the wrong ingredient continue making the shot then update shot to fix it</p>
+<p><font color="red">Note: You can only make shots that have the<font color="yellow"> SAME NUMBER OF PUMPS</font> as you do ingredients if you have
+only 3 pumps you will only be able to make shots with 3 ingredients. You can make a shot having 
+more but you will not be able to make it and it will not show up on your shot list </p></font>
+<h2><a href="#home"><p class="tab">Back to Top </a></p></h2> 
+<br><br>
+
+<h1 id="Avs"></h1><br>
+<h1 style="font-size:50px"><font color="Lime">Available shots</p></a></h1></font>
+<p>from Drinks click on Just a shot or from short cut menu click available shots</p>
+<p>Choose either one shot or a few (up to 15 shots)</p>
+<p>Available shots are shots that could be made with what is in the <a href="/lcabinet">Liquor Cabinet </a>select to view what's
+available</p>
+<p>If the shot you want is no available, either find the shot in <a href="/allshots">shot list</p></a>
+<h2><a href="#home"><p class="tab">Back to Top </a></p></h2>
+<br><br>
+
+<h1 id="Us"></h1><br>
+<h1 style="font-size:50px"><font color="Lime">Update shots</p></a></h1></font>
+<p>In update select update shots</p>
+<p>Choose the shot you wish to change<p>
+<p>The shot will list all of the ingredients and quantity<p>
+<p>Here you and click add to add an ingredient<p>
+<p>when you add to the shot you will have to select update to add the ingredient<p>
+<p>Click delete to delete the shot<p>
+<p>To change each ingredient click on the ingredient<p>
+<p>Clicking on the ingredient will give you 2 more choices Update or delete<p>
+<p>Update will give you the option to change the amount<p>
+<p>Delete will remove that ingredient<p>
+<p>To exit click home or Bar-Pi on the nav bar<p>
+<h2><a href="#home"><p class="tab">Back to Top </a></p></h2>
+<br><br>
+
+<h1 id="Favs"></h1><br>
+<h1 style="font-size:50px"><font color="Lime">Favorites</p></a></h1></font>
+<p class="tab"><font color="SaddleBrown">Create Favorites</p></font>
+<p>In favorites click create favorites then Favorite shot</p>
+<p>From the list choose your shot</p>
+<p>Click favorite shot</p>
+<p>Enter Name and click enter</p>
+<p class="tab"><font color="SaddleBrown">Delete Favorites</p></font>
+<p>In favorites click delete favorites then Favorite shot</p>
+<p>From the list select the name you want to remove</p>
+<p class="tab"><font color="SaddleBrown">Make Favorites</p></font>
+<p>In favorites click make favorites then Favorite shot</p>
+<p>If the ingredients in your favorite shot isn't in the pumps you will be prompted to autoload them</p>
+<p><font color="crimson"><h5>Note: Bar-Pi will not make the shot if the ingredients are not in the pumps</p></font></h5>
+<h2><a href="#home"><p class="tab">Back to Top </a></p></h2>
+<br><br>
+<h1 id="Sl"></h1><br>
+<h1 style="font-size:50px"><font color="Lime">Shot List</p></a></h1></font>
+<p>In the Short cuts click shot List or At the bottom of Stats</p>
+<p>You could just view the possible shots that could be made or click on a shot</p>
+<p>From there you could auto load it's ingredients or choose it to be your favorite shot</p>
+<h2><a href="#home"><p class="tab">Back to Top </a></p></h2>
+<br><br>
+<h1 id="SGS"></h1><br>
+<h1 style="font-size:50px"><font color="Lime">Set Game Shot</p></a></h1></font>
+<p>In games click on Set game shot</p>
+<p>Choose to either keep the current game shot or change it</p>
+<p>if you decide to change it choose from the list of shots</p>
+<p>clicked loaded to set the game shot</p>
+<h2><a href="#home"><p class="tab">Back to Top </a></p></h2>
+<br><br>
+<h1 id="VG"></h1><br>
+<h1 style="font-size:50px"><font color="Lime">View Games</p></a></h1></font>
+<p>In Games click View Games</p>
+<p class="tab"><font color="DarkPink">Truth or Shots</p></font>
+<p>In Truth or Shots you have 3 choices</p>
+<p>Click on <a href="/tos/instructions">instructions</a> to view instructions</p>
+<p>click on create a card to make cards</p>
+<p>Click Play to Play the game</p>
+<p class="tab"><font color="DarkPink">Drink if..</p></font>
+<p>Set how many player are playing the game</p>
+<p>Same a Truth or shots you have 3 choices</p>
+<p>Click on <a href="/drinkif/instructions">instructions</a> to view instructions</p>
+<p>Click add questions to make your own questions</p>
+<p>Click Play to play the game</p>
+<p class="tab"><font color="DarkPink">Never have I ever..</p></font>
+<p>Set how many player are playing the game</p>
+<p>Same a Drink if you have 3 choices</p>
+<p>Click on <a href="/neverhave/instructions">instructions</a> to view instructions</p>
+<p>Click add questions to make your own questions</p>
+<p>Click Play to play the game</p>
+<p class="tab"><font color="DarkPink">Where's the water</p></font>
+<p>Same a Drink if you have 3 choices</p>
+<p>Click on <a href="/wtw/instructions">instructions</a> to view instructions</p>
+<p>Click add clear liquor to add a clear liquor that isn't listed</p>
+<p>Click Play to play the game</p>
+<h2><a href="#home"><p class="tab">Back to Top </a></p></h2>
+<h1 id="GS"></h1><br>
+<h1 style="font-size:50px"><font color="Lime">Game Settings</p></a></h1></font>
+<p>These are shortcuts to adding content to the game</p>
+<p>Click on any image to add to that game</p>
+<h2><a href="#home"><p class="tab">Back to Top </a></p></h2>
+
+<h1 id="LP"></h1><br>
+<h1 style="font-size:50px"><font color="Lime">Load Pump</p></a></h1></font>
+<p>From either settings or Pumps click Load Pump</p>
+<p>Choose any one of the existing liqour or mixers to load</p>
+<p>Choose to load into a pump in the liquor cabinet or add to my Cabinet</p>
+<p>Then choose with of the pumps you want to load it to</p>
+<p>Click save</p>
+<h2><a href="#home"><p class="tab">Back to Top </a></p></h2>
+<br><br>
+<h1 id="FP"></h1><br>
+<h1 style="font-size:50px"><font color="Lime">Flush Pump</p></a></h1></font>
+<p>In pumps click flush Pump</p>
+<p>Check one or as many as you want to flush</p>
+<p>click select</p>
+<h2><a href="#home"><p class="tab">Back to Top </a></p></h2>
+<br><br>
+
+<h1 id="AP"></h1><br>
+<h1 style="font-size:50px"><font color="Lime">Add Pump</p></a></h1></font>
+<p>In pumps click add Pump</p>
+<p>Listed will be the next pump </p>
+<p>choose the pin you wish it to be on</p>
+<p>choose the flow rate(how many seconds it takes to pour an ounce)</p>
+<p>click add Pump</p>
+<p>A empty bottle will be set to it, load whatever you want to it</p>
+<p><font color="red">Note: pin 40 is reserved for trigger switch used if you or whoever is making a drink forgets to put a glass</p>
+<h2><a href="#home"><p class="tab">Back to Top </a></p></h2></font>
+<br><br>
+<h1 id="MP"></h1><br>
+<h1 style="font-size:50px"><font color="Lime">Update Pump</p></a></h1></font>
+<p>In pump click Update Pump</p>
+<p>You will have a list of the pins on each of the pumps and flow rate</p>
+<p>Pick the pump you wish to change then click enter</p>
+<p>Change either pump pin or the flow rate or both then hit enter</p>
+<h1 style="font-size:50px"><font color="Lime">Test Flow</p></a></h1></font>
+<p>Place measuring cup under spout </p>
+<p>Start off with one second</p>
+<p>Bar-Pi will run the pump for one second.</p>
+<p>If the liquid is not an ounce add more time until it becomes an ounce</p>
+<p>Click Save</p>
+<p>If you go over, Click reset and try again</p>
+<h2><a href="#home"><p class="tab">Back to Top </a></p></h2>
+<br><br>
+<h1 id="DC"></h1><br>
+<h1 style="font-size:50px"><font color="Lime">Delete Pump</p></a></h1></font>
+<p>In Pump click Delete Pump</p>
+<p>The last pump created will be listed</p>
+<p>Click delete to remove it</p>
+
+<h2><a href="#home"><p class="tab">Back to Top </a></p></h2>
+<br><br>
+
+
+
+<h1 id="Ui"></h1><br>
+<h1 style="font-size:50px"><font color="Lime">Update Ingredient</p></a></h1></font>
+<p>In Update select Update Ingredient</p>
+<p>There you will have a list of all the ingredients in the database</p>
+<p>Choose the ingredient you want to change</p>
+<p>You will get a list of all the drinks and shot made with the ingredient</p>
+<p>You will get the option to update the image</p>
+<p><font color="red">Note: If you wish to remove the ingredient from the database you have to remove
+the ingredient from all of drinks and shots that it is in</p></font>
+
+<h2><a href="#home"><p class="tab">Back to Top </a></p></h2>
+<br><br>
+
+{% endblock content %}

@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+
+{% for count in range(0,tz,2) %}
+
+
+    <h2> <a href="/link_image/{{missingpics[count]}}">{{missingpics[count+1]}} </a></h2>
+
+  {% endfor %}
+
+
+
+
+{% endblock content %}
+

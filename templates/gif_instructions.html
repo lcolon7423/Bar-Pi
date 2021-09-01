@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h1><font color="yellow">Instructions- Making a gif</h1></font>
+
+<p><h2><font color="white">Gifs are use because I wanted a transparent background.
+<p>In order to make my gifs, I used  
+
+<a href="https://winworldpc.com/product/paint-shop-pro/5x">paintshop pro 5</a>
+and 
+<a href="https://www.albinoblacksheep.com/download/animationshop">Animataion Shop</a>
+
+<br>If these links don't work, then do a google search.. 
+If you are unable to find these programs, you can use any other paint program that resizes or any animated gif maker that has a transparent background.
+<br><br>
+Before you create a drink you have to add the liqour or mixer to the drink or Shot library
+if you don't know how click here<br>
+<a href="{{url_for('ckdrink')}}">Add a drink</a>
+
+<p>Once the new ingredient in entered it will make a generic pic.</p>
+
+Go online and find the image of the ingredient you just added and save it to your harddrive
+<p>Open image in paint shop pro</p>
+
+<a href="/static/barpi/gifpic1.jpg"><img src="/static/barpi/gifpic1.jpg" width="200" height="200"></a>
+<p>use the selection tool to crop image to its smallest size then copy and patse to create new image</p>
+<p>Select image and resize..</p>
+
+<a href="/static/barpi/gifpic2.jpg"><img src="/static/barpi/gifpic2.jpg" width="200" height="200"></a>
+<p>Set to pixel size and change the height to 275 make sure maintain aspect ratio is selected then click ok<p>
+<p>Save image as the name of the ingredient</p>
+<p>Open new image in animation pro shop</p>
+<a href="/static/barpi/gifpic3.jpg"><img src="/static/barpi/gifpic3.jpg" width="200" height="200"></a>
+<p>Select flood fill and check the box To Canvas Color</p>
+<p>click on background</p>
+<a href="/static/barpi/gifpic4.jpg"><img src="/static/barpi/gifpic4.jpg" width="200" height="200"></a>
+<p>Save image as gif in the same name</p>
+<p>From the nav bar goto settings then select link image</p>
+<p>There you will see all the ingredients that don't have an image attached</p>
+<p>Click browse and select the image you just created then click update image<p>
+<p>To check image see <a href="{{url_for('summary')}}">stats</p></a></font>
+</h2>
+
+{% endblock content %}

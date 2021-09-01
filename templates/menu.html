@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<head>
+<meta charset="UTF-8" />
+<link rel="shortcut icon" href="../static/barpi/martini-glass.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="../static/barpi/martini-glass.ico">
+</head>
+	<title>Pi-Tender - Settings</title>
+	<h1><FONT COLOR="#FF0000">CHOOSE A FUNCTION</h1></FONT>
+	
+	
+<style>
+body {
+	background-repeat:no-repeat;
+	background-image: url("../static/barpi/barpi.jpg"); 
+ 
+	
+	background-color: #000000
+}
+</style>
+<br>
+{%for count in range(0,tz,2)%}
+<a href="{{options[count]}}"><img src="{{options[count+1]}}" width="470" height="194">
+{%endfor%}
+<br><br>
+<div>
+
+
+{% endblock content %}
+

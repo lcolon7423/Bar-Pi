@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block content %}
+<style>
+.button-choose {
+  background-color: blue; /* Green */
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button1 {border-radius: 15px;}
+.button1 {width: 150px;}
+
+</style>
+
+<form method="post">
+
+<h1><FONT COLOR='WHITE'>CHOOSE TWO LIQUORS</h1></FONT>
+
+{%for l in liquors%}
+{%if l.ingredient=="Water"%}
+
+{%else%}
+<p><h4><input type="checkbox" name="liq" value={{l.id}}> {{l.ingredient}}</p></h4>
+{%endif%}
+{%endfor%}
+
+<body>
+
+<br>
+                        <div>
+		<h2><button class="button-choose button1" type="submit">Select</button></h2>
+                </div>
+        </form>
+</body>
+
+{% endblock content %}

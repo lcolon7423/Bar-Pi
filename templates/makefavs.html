@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block content %}
+
+{%for name in names%}
+ <h1>  <a href="/favorite/make/{{type}}/{{name}}/check">{{name}} </a></h1>
+
+{%endfor%}
+
+
+{% endblock content %}
