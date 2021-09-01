@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block content %}
+<style>
+body{background-color:#ffffff
+
+}
+.button-makeit {
+  background-color: #4040FF; /* lt blue */
+}
+
+</style>	
+
+	 <form method="POST" action="">
+
+
+	<select name = 'owners' class ='form-control' id ='owners' >
+
+	  {% for owner in owners%}
+
+		<option value={{owner}}>{{owner}}</option>
+
+		{% endfor %}
+			</select>
+			<br>
+
+
+	<button class="btn btn-outline-primary btn-lg">Select</button>	
+		
+	</form>
+
+
+{% endblock content %}

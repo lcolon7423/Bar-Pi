@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block content %}
+<style>
+body {
+	background-color: #ffffff
+}
+
+
+</style>
+
+<h1>{{ingredient}}</h1>
+<img src="{{ url_for('static', filename='drinks/' + pic) }}" />
+
+<br><br>
+<h2>In drinks:</h2>
+<p><h3>{%for drinks in indrinks%}</p></h3>
+{{drinks}}
+
+{%endfor%}
+<br><br><br>
+<h2>In shots:</h2>
+<p><h3>{%for shots in inshots%}</p></h3>
+{{shots}}
+{%endfor%}
+  
+<br><br><br>
+
+{%if sc==0 and dc==0%}
+{{sc}}
+<a href="/ingredients/delete/{{id}}"><img src="/static/barpi/deletebutton.jpg">
+{%else%}
+
+{%endif%}
+
+
+
+<a href="/link_image/{{id}}"><img src="/static/barpi/updatebutton.jpg">
+
+
+{% endblock content %}

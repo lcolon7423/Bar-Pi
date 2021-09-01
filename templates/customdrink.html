@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+
+        <h1><FONT COLOR="#FF0000">Custom Drink</h1></FONT>
+<br><br>
+
+<img src="{{ url_for('static', filename='drinks/' + ingredient_image) }}" />
+
+<form method="post">
+<style>
+body{ background-color:#ffffff
+}
+
+</style>
+
+ <h1> {{ ingredient }}</h1>
+ <h2>Quantity</h2>
+
+  <input type="text"  name="quantity"/><br><br>
+
+
+ <button type="submit">Enter </button>
+
+</form>
+
+
+
+
+{% endblock content %}

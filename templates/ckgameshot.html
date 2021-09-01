@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block content %}
+<style>
+.button-makeit {
+  background-color: #4CAF50; /* Green */
+}
+
+
+.redbutton {
+  background-color: #FF0000; /* red */
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+
+.button1 {border-radius: 15px;}
+.button1 {width: 150px;}
+
+</style>
+<h1><FONT COLOR="white">Current Game Shot is</h1></FONT>
+<h1><FONT COLOR="orange">{{drinkname}}</h1></FONT>
+
+<br><br>
+
+<form action="{{url_for('autoload2',drinkname=drinkname)}}" method="post">
+<div>
+        <h2><button class="button-makeit button1" type="submit" name ="drinkname" value ={{id}}>Keep</button></h2>
+                </div>
+        </form>
+<form action="{{url_for('change_gameshot',drinkname=drinkname)}}">
+
+<button  class="redbutton button1"  type="submit" name ="change" value ="change">Change</button>
+
+</form>
+
+{% endblock content %}

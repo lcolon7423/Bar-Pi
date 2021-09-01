@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block content %}
+<style>
+.button-success {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button1 {border-radius: 15px;}
+.button1 {width: 150px;}
+
+
+
+</style>
+
+<body>
+	
+	<form action="/favorite/{{drtype}}/{{drinkname}}/add" method="post">
+		<div>
+			<h1><FONT COLOR="orange">{{drinkname}}</FONT>
+			<h1>Enter Your Name</h1>
+			
+			<input  type="text"  name="name"/>
+			<br><br>
+			<div>
+			<button class="button-success button1" type="submit">Enter</button>
+		</div>
+	</form>
+</body>
+
+<br><br>
+
+
+
+
+{% endblock content %}

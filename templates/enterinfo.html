@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<style>
+.button1 {border-radius: 15px;}
+.button1 {width: 150px;}
+</style>
+
+
+<body>
+
+
+	<form method="post">
+		<div>
+			<h2>Enter {{stype}}</h2>
+			
+			<p><input  type="{{itype}}"  name="{{ftype}}"></p>
+			
+	
+	
+			
+<button class="button-makeit button1" type="submit" name ="{{ftype}}">Add {{stype}}</button>
+			</div>
+	</form>
+</body>
+
+
+
+{% endblock content %}

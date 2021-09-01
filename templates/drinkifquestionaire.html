@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+{% block content %}
+<style>
+body{background-color:#ffffff
+
+}
+
+
+</style>
+
+
+
+    <div class="content3-section">
+        <form method="POST" action="">
+	{{ form.hidden_tag() }}
+		<br><br>
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">{{drinkgame}}</legend>
+                <div class="form-group">
+                    {{ form.question.label(class="form-control-label") }}
+
+                    {% if form.question.errors %}
+                        {{ form.question(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.question.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.question(class="form-control form-control-lg") }}
+                    {% endif %}
+	  		
+
+		<br><br>
+		<select name = 'categories' class ='form-control' id ='categories' >
+
+	  {% for category in categories %}
+
+		<option value={{category}}>{{category}}</option>
+
+		{% endfor %}
+			</select>
+		<br>
+		 <p>New Category</p>
+		<input type="text" name="category"/>	
+		<br><br>
+		<h5>Level ( 1=safe to 10=Daring)</h5>	 
+		 <input type="number" name="level"/><br><br>
+
+		
+            </fieldset>
+ 		<div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+    <div class="border-top pt-3">
+    </div>
+
+</div>
+
+
+{% endblock content %}
+
+
+

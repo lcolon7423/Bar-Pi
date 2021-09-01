@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+{% block content %}
+
+ <div class="content-section">
+        <form method="POST" action="">
+	{{ form.hidden_tag() }}
+                <br><br>
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Pump {{new}}</legend>
+                <div class="form-group">
+                    {{ form.pinout.label(class="form-control-label") }}
+
+                    {% if form.pinout.errors %}
+                        {{ form.pinout(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.pinout.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.pinout(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.flow.label(class="form-control-label") }}
+
+                    {% if form.flow.errors %}
+                        {{ form.flow(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.flow.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.flow(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+            </fieldset>
+		 <h4><a href="/pump/testflow/{{new}}/addpin">Test flow</a></h4><br>
+                <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+    <div class="border-top pt-3">
+    </div>
+
+</div>
+
+
+
+{% endblock content %}

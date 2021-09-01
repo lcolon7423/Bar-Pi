@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block content %}
+
+{%for count in range(0,tz,2)%}
+<a href="/wtw/addliquor/{{ingredients[count]}}"><img src="{{ url_for('static', filename='drinks/'+ingredients[count+1]) }}"></a>
+{%endfor%}
+
+
+{% endblock content %}

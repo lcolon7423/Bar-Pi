@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<html>
+<head>
+<meta charset="UTF-8" />
+<link rel="shortcut icon" href="static/barpi/martini-glass.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="static/barpi/martini-glass.ico">
+</head>
+
+<style>
+body {
+        background-color: #ffffff
+}
+</style>
+
+
+	<h1><FONT COLOR="orange">{{drinkname}}</h1></FONT>
+
+	 {%if makeit=="yes"%}
+	<h1>If you want to have your favorite </h1>
+	{%else%}
+
+
+	{%endif%}
+
+
+	<h1><FONT COLOR="Green">Load These Ingredients into the Pumps then click Loaded</h1></FONT>
+<br><br><br>
+
+
+	<form method="post">
+	{% for pic in pumppics:  %}
+
+<img src="{{ url_for('static', filename='drinks/' + pic) }}">
+
+
+		{% endfor %}		
+
+	{%if makeit=="yes"%}
+	
+	<h1><a href="/favorite/make/{{type}}/{{owner}}/loaded"><FONT COLOR="orange">Loaded!</a></FONT></h1>
+	{%else%}
+    {%if gs=="yes"%}
+	<div><h1><a href="/{{loaded}}/{{drinkname}}"><FONT COLOR="red">Load it!</a></FONT></h1>
+	{%else%}
+<br><br>
+	<h1>Load from </h1>
+	{%for count in range(1,pumpcount)%}
+	<a href="/{{loaded}}/{{drinkname}}/{{count}}"><FONT COLOR="red">Pump {{count}}</a></FONT>
+	{%endfor%}
+
+	{%endif%}		
+	{%endif%}	
+	</form>
+
+
+{% endblock content %}

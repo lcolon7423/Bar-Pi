@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+
+<html>
+<head>
+<meta charset="UTF-8" />
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="shortcut icon" href="/static/barpi/martini-glass.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="/static/barpi/martini-glass.ico">
+</head>
+	<h2><FONT COLOR="#FF0000"> Available {{drtype}} in Cabinet</h2></FONT>
+
+  {% for count in range(0,tz,2) %}
+
+   
+    <h1><a href="/{{profile}}/{{avdrinks[count]}}">{{avdrinks[count+1]}} </a></h1>   
+
+  {% endfor %}  
+
+		
+
+  
+
+
+
+
+{% endblock content %}

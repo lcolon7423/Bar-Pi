@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block content %}
+<style>
+body{background-color:#ffffff
+
+}
+
+
+</style>
+
+
+
+ <div class="content2-section">
+        <form method="POST" action="">
+		{{ form.hidden_tag() }}
+		<br><br>
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">{{ingredient}}</legend>
+		put into 
+		<select name = 'owners' class ='form-control' id ='owners' >
+
+	  {% for owner in owners%}
+
+		<option value={{owner}}>{{owner}}</option>
+
+		{% endfor %}
+			</select>
+			<br>
+		 <p>New Owner</p>
+		<input type="text" name="newowner"/>	
+		<br>
+			
+		<div class="form-check">
+                    {{ form.addmore(class="form-check-input") }}
+                    {{ form.addmore.label(class="form-check-label") }}
+                </div>
+
+            </fieldset>
+ 		<div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+    <div class="border-top pt-3">
+    </div>
+
+</div>
+
+
+
+
+{% endblock content %}

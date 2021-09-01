@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+
+<html>
+<head>
+<meta charset="UTF-8" />
+<link rel="shortcut icon" href="/static/barpi/martini-glass.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="/static/barpi/martini-glass.ico">
+</head>
+	<h2><FONT COLOR="#FF0000"> Available {{drtype}} in Pumps</h2></FONT>
+
+
+{%if multi== "yes"%}
+
+
+{% for shots in avshots %}
+
+   
+    <h1><a href="/sprofile2/{{shots}}/{{shot_amt}}/{{ep}}">{{shots}} </a></h1>   
+
+  {% endfor %}  
+
+
+{%else%}
+
+  {% for drinks in avdrinks %}
+
+ 
+    <h1><a href="/{{profile}}/{{drinks}}">{{drinks}} </a></h1>   
+
+  {% endfor %}
+
+{%endif%}
+
+		
+
+  
+
+
+
+
+{% endblock content %}

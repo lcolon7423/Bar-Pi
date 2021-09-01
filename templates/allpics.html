@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+	<h1><FONT COLOR="#FF0000"> Drinks Ingredients in library</h1></FONT>
+	<br>
+<style>
+body { 
+	background-color:#ffffff
+}
+
+
+</style>
+
+
+{% for p in pics:  %}
+
+<img title="{{p.name}}" alt="{{pa}}" src="{{ url_for('static', filename='drinks/' + p.image) }}" />
+
+		{% endfor %}		
+   
+     
+
+  
+  	
+		
+
+{% endblock content %}

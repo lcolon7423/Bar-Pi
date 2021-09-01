@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<style>
+.button-keep {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button {
+  background-color: #FF0000; /* red */
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+.button1 {border-radius: 15px;}
+.button1 {width: 150px;}
+
+</style>
+
+
+
+
+	<h1><FONT COLOR="#FF0000">{{drinkname}}</h1></FONT>
+<br><br>
+<h2><FONT COLOR="blue">Ingredients:</h2>
+
+{%for i in ingredients[0:]  %}
+<h3>{{i.ingredient}}    {{i.amount}} Ounces</h3>
+
+		{% endfor %}
+
+<form action="/{{action}}" method="post">
+                <div>
+                <br>
+                <button class="button-keep button1" type="submit" name ="drinkname" value ={{id}}>Auto Load</button>
+                </div>
+        </form>
+
+
+<form action="/favorite/{{drtype}}" method="post">
+                <div>
+                <br>
+                <button class="button button1" type="submit" name ="drinkname" value ={{id}}>Favorite {{drtype}}</button>
+                </div>
+        </form>
+
+
+
+{% endblock content %}

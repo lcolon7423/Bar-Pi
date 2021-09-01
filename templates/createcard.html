@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+{% block content %}
+<style>
+body{background-color:#ffffff
+
+}
+
+
+</style>
+
+
+
+    <div class="content3-section">
+	<form method="POST" action="" enctype="multipart/form-data">
+	{{ form.hidden_tag() }}	
+		<br><br>
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">{{drinkgame}}</legend>
+		 <div class="form-group">
+                    {{ form.ctitle.label(class="form-control-label") }}
+
+                    {% if form.ctitle.errors %}
+                        {{ form.ctitle(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.ctitle.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.ctitle(class="form-control form-control-lg") }}
+                    {% endif %}
+		<br><br>	
+		 <div class="form-group">
+                    {{ form.question.label(class="form-control-label") }}
+
+                    {% if form.question.errors %}
+                        {{ form.question(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.question.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.question(class="form-control form-control-lg") }}
+                    {% endif %}
+		
+		<br><br>
+		 <div class="form-group">
+                    {{ form.card_image.label() }}
+                    {{ form.card_image(class="form-control-file") }}
+                    {% if form.card_image.errors %}
+                        {% for error in form.card_image.errors %}
+                            <span class="text-danger">{{ error }}</span></br>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+        <br>
+
+
+		
+            </fieldset>
+ 		<div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+    <div class="border-top pt-3">
+    </div>
+
+</div>
+
+
+{% endblock content %}
+
+
+
+
+

@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<form method="post">
+
+<h1><FONT color="LightSkyBlue">To flush select pumps, load water in those pumps you checked then click select</h1></FONT>
+<h2><FONT color="LightGreen">To flush all pumps load water in all then click select</h2></FONT>
+
+
+{% for count in range(1,pumps) %}
+
+<p><h4><input type="checkbox" name="pump" value={{count}}> Pump {{count}}</p></h4>
+{%endfor%}
+
+<body>
+
+
+                        <div>
+                <h2><button class="button-choose button1" type="submit" name ="shotname"></button></h2>
+                        <button type="submit">Select</button>
+                </div>
+        </form>
+
+
+{% endblock content %}

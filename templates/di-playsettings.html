@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+<form method="post">
+<h1>Categories</hl>
+{%for category in categories%}
+<p><h4><input type="checkbox" name="cat" value={{category}}> {{category}}</p></h4>
+{%endfor%}
+
+<h1>Level </h1>
+{%for count in range(1,11)%}
+<h5><input type="radio" name="level" value={{count}}>{{count}}</h5>
+{%endfor%}
+<body>
+	
+			
+			<div>
+		<h2><button class="button-choose button1" type="submit" name ="shotname"></button></h2>
+			<button type="submit">Enter</button>
+		</div>
+	</form>
+</body>
+
+
+{% endblock content %}

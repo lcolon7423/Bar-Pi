@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h1><FONT COLOR="blue">{{ingredient}}</FONT> in <FONT COLOR="#8080FF">{{drinkname}}</h1></FONT>
+
+<p><h2>Current amount: {{amt}} ounces</p></h2>
+
+<h3>New Amount
+
+<form method="post">
+<p> <input  type="text"  name="amount"/></h3></p>
+
+
+		<button type="submit">Enter</button>
+</form>
+
+{% endblock content %}
